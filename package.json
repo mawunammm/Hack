@@ -1,0 +1,23 @@
+{
+  "name": "hack",
+  "version": "1.0.0",
+  "description": "for mawunam",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hack"
+  ],
+  "author": "Mawunammm, Noge",
+  "license": "UNLICENCED",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.20.0",
+    "mysql2": "^3.11.0",
+    "nodemon": "^3.1.4"
+  }
+}
