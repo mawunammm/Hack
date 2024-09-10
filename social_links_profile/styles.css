@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(21, 20, 18);
+}
+
+.container {
+  position: fixed;
+  left: 50%;
+  height: 640px;
+  width: 400px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 500px;
+  background: rgb(39, 36, 36);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+img {
+  border-radius: 50%;
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+h2.name {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 35px;
+  color: hsl(60, 14%, 90%);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+p.location {
+  font-family: "Fraunces";
+  font-weight: 700;
+  font-size: 18px;
+  color: hsl(58, 98%, 56%);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+p.occupation {
+  text-align: center;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+}
+
+.github {
+  background-color: rgb(64, 62, 62);
+  color: aliceblue;
+}
+
+.linkedin {
+  background-color: rgb(64, 62, 62);
+  color: aliceblue;
+}
+
+.instagram {
+  background-color: rgb(64, 62, 62);
+  color: aliceblue;
+}
+
+.frontendmentor {
+  background-color: rgb(64, 62, 62);
+  color: aliceblue;
+}
+
+.twitter {
+  background-color: rgb(64, 62, 62);
+  color: aliceblue;
+}
+
+.btn:hover {
+  background-color: rgb(184, 199, 41);
+}

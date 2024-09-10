@@ -1,0 +1,79 @@
+@import url('https://fonts.google.com/share?selection.family=Josefin+Sans:ital,wght@0,100..700;1,100..700');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans',
+        sans-serif;
+    background-image : url(back.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: lightpink;
+}
+
+.BOX {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.text{
+    padding: 7%;
+    text-align: center;
+}
+
+.title {
+    color: hsl(315, 87%, 81%);
+    font-weight: 900;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text p.phrase {
+    color: #8a8a8a;
+    margin-bottom: 25px;
+}
+
+.plan-details{
+    background-color: hsl(311, 100%, 91%);
+    border-radius: 12px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.proceed-btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: hsl(313, 71%, 84%);
+    padding: 10px 0;
+    border-radius: 12px;
+    margin: 10px 0;
+    transition: background-color .3s ease;
+}
+
+a.proceed-btn:hover {
+    background-color: hsl(323, 59%, 67%);
+}
+
+a.cancel-btn {
+    color: hsl(323, 100%, 82%);
+    text-decoration: none;
+    font-weight: 900;
+    transition: color .3s ease;
+}
+
+a.cancel-btn:hover {
+    color: hsl(334, 91%, 68%);
+}

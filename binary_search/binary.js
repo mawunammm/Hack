@@ -1,0 +1,1 @@
+function binary (search, index,)
