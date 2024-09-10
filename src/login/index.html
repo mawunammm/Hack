@@ -29,26 +29,39 @@
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-    
+            // Sauvegarde dans le localStorage (si nécessaire)
             localStorage.setItem('username', username);
             localStorage.setItem('password', password);
 
-            
-            fetch('http://localhost:3000/store-info', {
+            // Requête POST vers /store-info
+            fetch('/store-info', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ username, password })
             })
-            .then(response => response.text())
-            .then(data => console.log(data));
-
-           
-            document.getElementById('message').textContent = `Welcome, ${username}!`;
+            .then(response => {
+                if (response.ok) {
+                    // Si l'enregistrement est réussi, redirection vers /home
+                    window.location.href = '/home';
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                if (data && data.msg) {
+                    // Affiche un message d'erreur en cas de problème
+                    document.getElementById('message').textContent = data.msg;
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                document.getElementById('message').textContent = 'Une erreur est survenue lors de l\'enregistrement.';
+            });
         });
 
-       
+        // Vérifie si l'utilisateur est déjà enregistré en localStorage
         window.onload = function() {
             const storedUsername = localStorage.getItem('username');
             const storedPassword = localStorage.getItem('password');

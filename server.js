@@ -28,6 +28,20 @@ app.post('/store-info', function (req, res) {
         } else {
             return res.status(201).json({ msg: 'Votre message à été bien envoyer' });
         }
+        const querySelect = 'SELECT * FROM data WHERE username = ?';
+        db.query(querySelect, [username], (err, rows) => {
+            if (err) {
+                console.error('Erreur lors de la vérification dans la base de données :', err);
+                return res.status(500).json({ msg: 'Erreur lors de la vérification dans la base de données' });
+            }
+            
+            // Si l'utilisateur est trouvé, redirige vers la page d'accueil
+            if (rows.length > 0) {
+                return res.redirect('/home');
+            } else {
+                return res.status(500).json({ msg: 'Utilisateur non trouvé après l\'insertion' });
+            }
+        });
     });
 });
 
